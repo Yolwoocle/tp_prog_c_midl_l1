@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef unsigned char tCoeff;
-typedef tCoeff ** tMatrice;
+#include "matrice.h"
 
 /*
 Alloue et initialise l’espace mémoire nécessaire pour stocker une matrice contenant 
@@ -124,14 +122,4 @@ tMatrice triangle(int n) {
     }
 
     return mat;
-}
-
-int main() {
-    int n;
-    printf("n = ");
-    scanf("%d", &n);
-
-    tMatrice mat = triangle(n);
-
-    afficher_triangle(mat, n);
 }
