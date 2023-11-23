@@ -10,10 +10,10 @@ $(EXE):$(OBJ)
 # Pour produire les fichiers objets
 ex2.o:ex2.c matrice.h image.h
 	$(CC) $(CFLAGS) -c ex2.c
-image.o:image.c image.h
-	$(CC) $(CFLAGS) -c image.c
 matrice.o:matrice.c matrice.h
 	$(CC) $(CFLAGS) -c matrice.c
+image.o:image.c image.h
+	$(CC) $(CFLAGS) -c image.c
 # Pour effacer les objets et les exécutables
 clean:
 	$(RM) $(OBJ) $(EXE) 

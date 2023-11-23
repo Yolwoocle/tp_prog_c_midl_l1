@@ -1,6 +1,5 @@
 #ifndef MATRICE_H
 #define MATRICE_H
-#include <stddef.h>
 
 typedef unsigned char tCoeff;
 typedef tCoeff ** tMatrice;

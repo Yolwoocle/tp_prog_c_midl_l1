@@ -17,9 +17,6 @@ tImage im_allouer(int nb_lignes, int nb_colonnes) {
     image->nb_lig = nb_lignes;
     image->nb_col = nb_colonnes;
     tMatrice mat = mat_allouer(nb_lignes, nb_colonnes);
-    printf("jvais afficher \n");
-    mat_afficher(mat, nb_colonnes, nb_lignes);
-    printf("fini afficher \n");
     image->niv_gris = mat;
 
     return image;
@@ -54,14 +51,12 @@ tImage im_lire(char nom_fichier[]) {
         perror(nom_fichier);
         return NULL;
     }
-    char * format;
+    char format[3];
     fscanf(pfile, "%s", format);
     
     int w, h;
     fscanf(pfile, "%d", &w);
-    fscanf(pfile, "%d", &h);
-    printf("w = %d\n", w);    
-    printf("h = %d\n", h);    
+    fscanf(pfile, "%d", &h); 
 
     tImage img = im_allouer(h, w);
 
@@ -77,12 +72,13 @@ tImage im_lire(char nom_fichier[]) {
     }
 
     fclose(pfile);
+    return img;
 }
 
 /*
     Écrit l’image `Im` dans le fichier de nom `NomFichier` au format `pgm-ascii`. La valeur du
 niveau de gris maximal à écrire est 255.
 */
-void im_ecrire(tImage im, char nom_fichier[]) {
+// void im_ecrire(tImage im, char nom_fichier[]) {
     
-}
+// }

@@ -1,6 +1,5 @@
 #ifndef IMAGE_H
 #define IMAGE_H
-// #include <stddef.h>
 #include "matrice.h"
 
 typedef struct sImage *tImage;
