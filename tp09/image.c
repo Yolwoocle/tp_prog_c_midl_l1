@@ -76,7 +76,7 @@ tImage im_lire(char nom_fichier[]) {
 }
 
 /*
-    Écrit l’image `Im` dans le fichier de nom `NomFichier` au format `pgm-ascii`. La valeur du
+    Écrit l’image `im` dans le fichier de nom `nom_fichier` au format `pgm-ascii`. La valeur du
 niveau de gris maximal à écrire est 255.
 */
 void im_ecrire(tImage im, char nom_fichier[]) {
@@ -95,7 +95,7 @@ void im_ecrire(tImage im, char nom_fichier[]) {
     
     for (int ilig = 0; ilig < im->nb_lig; ilig++) {
         for (int icol = 0; icol < im->nb_col; icol++) {
-            fprintf(f, "%3d ", im_niv_gris(im)[ilig][icol]);
+            fprintf(f, "%-3d ", im_niv_gris(im)[ilig][icol]);
         }
         fprintf(f, "\n");
     }

@@ -2,6 +2,7 @@
     "files.associations": {
         "stddef.h": "c",
         "stdlib.h": "c",
-        "matrice.h": "c"
+        "matrice.h": "c",
+        "image.h": "c"
     }
 }
